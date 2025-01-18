@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Retail Hub</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section id="header">
+        <img id="logo" src="images/sitelogo.jpg" alt="logo">
+        <div id="nav-links">
+            <ul id="links">
+                <li><a href="home.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="wishcart.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a  class="active" href="setting.html"><i class="fa-solid fa-gear"></i></a></li>
+                <li><a href="cartpro.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="setting-container">
+
+    <div id="account-setting">
+        <span><i class="fa-solid fa-user"></i> Account Setting  <i id="arrow-right1" class="fa-solid fa-angle-right"></i></span>
+    </div>
+
+    <div id="address-setting">
+        <span><i class="fa-solid fa-location-dot"></i> Address Management  <i id="arrow-right2" class="fa-solid fa-angle-right"></i></span>
+    </div>
+
+    <div id="seller-setting">
+        <span><i class="fa-solid fa-briefcase"></i> Become a Seller  <i id="arrow-right3" class="fa-solid fa-angle-right"></i></span>
+    </div>
+
+    </div>
+
+    <div id="empty-content">
+     <h2>Click on a Arrow to Continue</h2>        
+    </div>
+
+    <div id="account-model">
+        <button id="close"><i class="fa-solid fa-xmark"></i></button>
+
+        <div id="full-name">
+
+        </div>
+        <div id="user-name">
+
+        </div>
+        <button id="edit-profile"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+        <button id="logout-btn">Log Out</button>
+    </div>
+
+    <div id="profile-edit-model">
+        <button id="close-edit"><i class="fa-solid fa-xmark"></i></button>
+        <form id="edit-form">
+        <label for="new-fullname">New Name</label>
+        <input type="text" id="new-fullname" placeholder="Enter new name" required>
+        <label for="new-username" >New Username</label>
+        <input type="text" id="new-username" placeholder="Enter new username" required>
+        <label for="curr-password">Current Password</label>
+        <input type="password" id="curr-password" placeholder="Enter current password" required>
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" placeholder="Enter new password" required>
+        <button type="submit" id="confirm-edit">Confirm</button>
+        </form>
+    </div>
+
+    <section id="logout-model">
+        <p>Are You Sure You Want To Logout</p>
+        <button id="ok-btn">Yes</button>
+        <button id="no-btn">No</button>
+    </section>
+
+
+    <div id="address-model">
+        <button id="close-address-model"><i class="fa-solid fa-xmark"></i></button>
+      <div id="delivery-address">
+
+      </div>
+      <button id="set-address-btn">Set Address</button>
+    </div>
+
+    <div id="set-address-model">
+        <button id="close-set-address-model"><i class="fa-solid fa-xmark"></i></button>
+        <form id="address-form">
+           <textarea id="enter-location">Enter delivery address</textarea> 
+           <button type="submit" id="submit-location">Submit</button>
+        </form>
+    </div>
+
+    <div id="seller-model">
+        <button id="close-seller-model"><i class="fa-solid fa-xmark"></i></button>
+        <button id="add-product-btn">Add Your Product</button>
+    </div>
+
+    <section id="product-upload">
+        <div class="product-upload-container">
+          <form id="product-form">
+          <label for="image-upload" class="image-upload-level">Image Upload</label>
+          <input type="file" id="image-upload" accept="image/*" >
+          <label for="brand-name">Brand Name</label>
+          <input type="text" id="brand-name" name="brand-name" placeholder="Enter brand name" required>
+          <label for="product-quantity">Quantity</label>
+          <input type="number" id="product-quantity" name="product-quantity" placeholder="Availabe items" required>
+          <textarea id="product-des">Enter description</textarea>
+          <label for="product-price">Price</label>
+          <input type="number" id="product-price" name="product-price" placeholder="Enter price" required>
+          <button type="submit" id="add-btn">Add item</button>
+          <button id="close-btn">Close</button>
+          </form>
+        </div>
+      </section>
+
+    
+
+    <script src="setting.js"></script>
+</body>
+</html>

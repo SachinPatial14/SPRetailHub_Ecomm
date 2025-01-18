@@ -1,0 +1,648 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header start */
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 65px;
+    background-color: #433a3f; 
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#logo{
+   width: 53px;
+   height: 53px;
+   object-fit: cover;
+   position: relative;
+   border-radius: 50%;
+   margin-left: 24px;
+}
+
+#links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#links li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    margin-right: 20px;
+}
+
+#links li a{
+    text-decoration: none;
+    color: #72a98f;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#links li a:hover,
+#links li a.active{
+    color: #10a89e;
+}
+
+#links li a.active::after,
+#links li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #10a89e ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* setting area */ 
+
+#setting-container {
+    position: absolute;
+    height: 80%;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 10px;
+    border: 2px solid #5e3023;
+    margin: 8px;
+    background-color: #c08552 ;
+}
+
+#account-setting,
+#address-setting,
+#seller-setting {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 30px;  
+    margin-bottom: 30px;  
+    transition: all 0.3s ease;
+}
+
+#account-setting {
+    background-color: #f9f9f9; 
+}
+
+#address-setting {
+    background-color: #f9f9f9;
+}
+
+#seller-setting {
+    background-color: #f9f9f9;
+}
+
+
+#account-setting span,
+#address-setting span,
+#seller-setting span {
+    color: brown;
+}
+
+#account-setting i, 
+#address-setting i,
+#seller-setting i {
+    margin-right: 8px;
+    color: black;
+}
+
+#arrow-right1 {
+    transition: transform 0.3s ease; 
+    margin-left: 60px;
+}
+
+#arrow-right2 {
+    transition: transform 0.3s ease; 
+    margin-left: 15px;
+}
+
+#arrow-right3 {
+    transition: transform 0.3s ease; 
+    margin-left: 56px;
+}
+
+#arrow-right1:hover,
+#arrow-right2:hover,
+#arrow-right3:hover{
+    transform: translateX(5px); 
+    color: grey;
+    cursor: pointer;
+}
+
+#empty-content {
+  display: block;
+  margin-left: 50%;
+  margin-top: 200px;
+  color: grey;
+}
+
+/* account setting */
+
+#account-model {
+    display: none;
+    background-color: #052f5f;
+    margin-left: 50%;
+    margin-top: 110px;
+    height: 300px;
+    width: 300px;
+    border-radius: 2px;
+    position: relative; 
+    padding-top: 20px; 
+}
+
+#account-model #close {
+    position: absolute ;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: #72a98f;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#account-model #close:hover {
+    background-color: #d52323;
+}
+
+#account-model #full-name, 
+#account-model #user-name {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #d5c67a;
+    margin: 10px;
+}
+
+#account-model #full-name h4, 
+#account-model #user-name h4 {
+    color: #795c5f;
+}
+
+#account-model #edit-profile, 
+#account-model #logout-btn {
+    padding: 5px;
+    background-color: #72a98f;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#account-model #edit-profile:hover {
+    background-color: #22333b;
+}
+
+#account-model #logout-btn:hover {
+    background-color: #f71616;
+}
+
+#account-model #edit-profile {
+    margin-top: 15px; 
+}
+
+#account-model #logout-btn {
+    margin-top: 5px; 
+}
+
+#logout-model {
+    position: fixed;  
+    top: 50%;         
+    left: 50%;        
+    transform: translate(-50%, -50%);  
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;     
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;    
+    display: none;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#logout-model p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#ok-btn, #no-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#no-btn {
+    background-color: #f44336; 
+}
+
+#ok-btn:hover, #no-btn:hover {
+    opacity: 0.8; 
+}
+
+#profile-edit-model {
+    position: fixed;          
+    top: 50%;                 
+    left: 50%;                
+    transform: translate(-50%, -50%); 
+    background-color: rgb(167, 206, 222); 
+    padding: 20px;           
+    width: 300px;            
+    border-radius: 8px;      
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;           
+    display: none;           
+}
+
+
+#close-edit {
+    position: absolute;      
+    top: 10px;               
+    right: 10px;             
+    background: black;
+    color: white;
+    padding: 2px; 
+    border-radius: 3px;       
+    border: none;            
+    font-size: 20px;         
+    cursor: pointer;        
+}
+
+#close-edit:hover{
+    background-color: #d52323;
+}
+
+label {
+    display: block;          
+    margin-bottom: 5px;      
+    font-weight: bold;       
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;             
+    padding: 8px;            
+    margin-bottom: 15px;     
+    border: 1px solid #ccc; 
+    border-radius: 4px;     
+    font-size: 14px;         
+}
+
+#confirm-edit {
+    background-color: #007BFF; 
+    color: white;             
+    padding: 10px 15px;        
+    border: none;              
+    border-radius: 4px;        
+    cursor: pointer;          
+    font-size: 16px;         
+    transition: background-color 0.3s; 
+    width: 100%;               
+}
+
+#confirm-edit:hover {
+    background-color: rgb(21, 107, 21);
+}
+
+/* address management setting */
+
+#address-model {
+    display: none;
+    background-color: #052f5f;
+    margin-left: 50%;
+    margin-top: 110px;
+    height: 350px; 
+    width: 300px;
+    border-radius: 2px;
+    padding-bottom: 30px; 
+}
+
+#address-model #close-address-model {
+    padding: 5px;
+    background-color: #72a98f;
+    margin-top: 12px;
+    margin-left: 270px;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#address-model #close-address-model:hover {
+    background-color: #d52323;
+}
+
+#address-model #delivery-address {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #d5c67a;
+    margin: 10px;
+    border-radius: 4px;
+    margin-top: 60px;
+}
+
+#address-model #delivery-address h4{
+    color: #795c5f;
+}
+
+#address-model #set-address-btn {
+    background-color: #72a98f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 90%;
+    margin-left: 16px;
+    margin-top: 20px; 
+}
+
+#address-model #set-address-btn:hover {
+    background-color: #22333b;
+}
+
+#set-address-model {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(167, 206, 222); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    width: 350px; 
+    height: 200px;
+    display: none; 
+}
+
+
+#close-set-address-model {
+    position: absolute; 
+    top: 5px;
+    right: 5px;
+    padding: 1px;
+    border-radius: 3px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#close-set-address-model:hover{
+    background-color: #d52323;
+}
+
+#enter-location {
+    width: 100%; 
+    height: 100px; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+    font-size: 14px;
+    resize: none;
+    margin-top: 20px; 
+}
+
+
+#submit-location {
+    width: 100%; 
+    padding: 10px;
+    background-color: #007bff;
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#submit-location:hover {
+    background-color: rgb(37, 162, 37) ;
+}
+
+/* become a seller setting */
+
+#seller-model {
+    display: none;
+    background-color: #052f5f;
+    margin-left: 50%;
+    margin-top: 110px;
+    height: 250px; 
+    width: 250px;
+    border-radius: 2px;
+    padding-bottom: 30px;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#seller-model #close-seller-model{
+    margin-top: 10px;
+    margin-left: 220px;
+    margin-bottom: 10px;
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+    background-color: #72a98f;
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#seller-model #close-seller-model:hover{
+    background-color: #d52323;
+}
+
+#seller-model #add-product-btn{
+    margin-top: 55px;
+    margin-left: 20px;
+    background-color: #72a98f;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 80%;
+}
+
+#seller-model #add-product-btn:hover{
+    background-color: #22333b;
+}
+
+
+/* Model upload products */
+
+#product-upload {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .product-upload-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-upload-container label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  .product-upload-container input,
+  .product-upload-container textarea {
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .product-upload-container textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .product-upload-container input[type="file"] {
+    padding: 5px;
+    background-color: #fafafa;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+#add-btn:hover {
+    background-color: #45a049;
+}
+
+#add-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(76, 175, 80, 0.5);
+}
+
+#close-btn {
+    background-color: #f44336; 
+    color: white;
+}
+
+#close-btn:hover {
+    background-color: #d32f2f; 
+}
+
+#close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(244, 67, 54, 0.5);
+}
+
+/* footer section */
+
+#footer{
+    background-color: #433a3f;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 5px 8px 15px rgba(0,0,0,0.2);
+}
+
+#footer img{
+    width: 53px;
+    height: 53px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 50%; 
+    margin-bottom: 40px;
+}
+
+#footer h3{
+    color: #be3e30;
+    margin-bottom: 5px;
+}
+
+#footer p{
+    color: #d6c3c9;
+    margin-bottom: 15px;
+}
+
+#footer h4{
+    color: #a37c40;
+    margin-bottom: 15px ;
+    font-size: 18px;
+}
+
+#footer span,h5{
+    color: #b49082;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

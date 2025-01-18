@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Retail Hub</title>
+    <link rel="stylesheet" href="prodetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <img id="logo" src="images/sitelogo.jpg" alt="logo">        
+           <button id="info-btn" href="prodetails.html">Info</button>
+        <div id="nav-links">
+            <ul id="links">
+                <li><a href="home.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="shop.html"><i class="fa-solid fa-shop"></i></a></li>
+                <li><a href="wishcart.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="order.html"><i class="fa-solid fa-box-open"></i> Order</a></li>
+                <li><a href="cartpro.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pro-details">
+        <div id="pro-image">
+
+        </div>
+        <div id="pro-des">
+
+        </div>
+
+    </section>
+
+   <!-- review section-->
+
+    <section id="reviews">
+      <h2>Customer Reviews</h2>
+      <div id="review-list">
+
+      </div>  
+      <form id="review-form">
+        <h3>Leave a Review</h3>
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="rating">Ratting:</label>
+        <select id="rating" name="rating" required>
+            <option value="4">Excellent</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Poor</option>
+        </select>
+        <label for="your-review">Your Review</label>
+        <textarea id="your-review" name="your-review" rows="4" required></textarea>
+        <button id="submit-btn" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- FAQ section-->
+
+    <section id="faq">
+        <h2>FAQ =></h2>
+        <div class="faq-container">
+            <button id="show-questions-btn">Ask me a question</button>
+            <div id="faq-section" class="hidden">
+                <div class="faq-question" data-answer="Return policy within 7 days ">What is the return policy?</div>
+                <div class="faq-question" data-answer="Yes, this product come with a 1 year warranty">Does this product come with a warranty?</div>
+                <div class="faq-question" data-answer="Yes, free shipping are available">Is there free shipping?</div>
+                <div class="faq-question" data-answer="Yes, within a 2 days cancellation process are active">Can I cancel my order?</div>
+                <div class="faq-question" data-answer="Yes, your personal information are secure with the higher information security">Is my personal information secure?</div>
+            </div>
+        </div>
+    </section>
+
+<section id="suggest-products">
+    <h2>Explore More</h2>
+    <p>Tech Solutions for a Smarter Tomorrow</p>
+    <div id="product-container">
+        <div id="pro-container">
+
+        </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <img src="images/sitelogo.jpg" alt="">
+      <h3>SP Retail Hub:</h3>
+      <p>Innovation  Quality  Experience</p>
+      <h4>Shop with confidence and discover the latest tech</h4>
+      <span>All Rights Reserved</span>
+      <h5>[Privacy Policy] | [Terms & Conditions]</h5>
+    </section>
+
+    
+    <script src="prodetails.js"></script>
+</body>
+</html>

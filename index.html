@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Retail Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img id="logo" src="images/sitelogo.jpg" alt="logo">
+        <h1 id="login-page">Login Page</h1>
+        <h1 id="signup-page">Signup page</h1>
+    </div>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login Account</h2>
+            <form id="login-area">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" placeholder="Enter your username or email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <button id="login-btn" type="submit">Login</button>
+                <p id="login-para">Don't have an account?<span id="login-span">Create Account</span></p>
+            </form>
+        </div>
+        <div class="signup-form">
+            <h2>Create Account</h2>
+            <form id="signup-area">
+                <label for="full-name">FullName</label>
+                <input type="text" id="full-name" placeholder="Enter fullname" required>
+                <label for="create-username">Username</label>
+                <input type="text" id="create-username" placeholder="Create username" required>
+                <label for="set-password">Set Password</label>
+                <input type="password" id="set-password" placeholder="Set password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                <button id="signup-btn"  type="submit">Sign up</button>
+                <p id="signup-para">Already have an account? <span id="signup-span">Login</span></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
